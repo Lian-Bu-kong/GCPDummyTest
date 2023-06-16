@@ -1,6 +1,6 @@
 ﻿namespace PostgresTest.Model.Dto
 {
-    public class PhotoInfmation
+    public class PhotoInfmationDto
     {
         public int UserID { get; set; }
         public string Name { get; set; } = string.Empty;

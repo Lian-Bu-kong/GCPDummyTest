@@ -16,11 +16,11 @@ namespace PostgresTest.Infra
             modelBuilder.Entity<PhotoInfmationEntity>()
            .HasKey(c => c.UserID);
             // No Key
-            modelBuilder.Entity<WeatherForecastEntity>()
+            modelBuilder.Entity<WeatherForecast>()
                 .HasNoKey();
         }
 
         public DbSet<PhotoInfmationEntity> PhotoInfmation { get; set; }
-        public DbSet<WeatherForecastEntity> WeatherForecast { get; set; }
+        public DbSet<WeatherForecast> WeatherForecast { get; set; }
     }
 }
