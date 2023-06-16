@@ -1,4 +1,11 @@
+using Microsoft.EntityFrameworkCore;
+using PostgresTest.Infra;
+
 var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddDbContext<DBContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Add services to the container.
 
