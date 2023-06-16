@@ -1,24 +1,20 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PostgresTest.Service;
-using System.Text.Json;
 
 namespace PostgresTest.Controllers.v1
 {
     [ApiController]
-    [ApiVersion("1.0")]
-    [Route("api/v{version:apiVersion}/[controller]")]
+    [Route("[controller]")]
     public class PhotoInfmationController : ControllerBase
     {
-        private readonly IPhotoInfmationService _photoInfmationService;
-        public PhotoInfmationController(IPhotoInfmationService photoInfmationService)
+        private readonly IPhotoInformationService _photoInformationService;
+        public PhotoInfmationController(IPhotoInformationService photoInfmationService)
         {
-            _photoInfmationService = photoInfmationService;
+            _photoInformationService = photoInfmationService;
         }
-
-        [HttpGet(Name = nameof(GetAllPhotoInfmation))]
-        public ActionResult GetAllPhotoInfmation(ApiVersion version)
+        public ActionResult Get()
         {
-            var photoInfmations = _photoInfmationService.ReadAllPhotoInfmation();
+            var photoInfmations = _photoInformationService.ReadAllPhotoInfmation();
        
             return Ok(new
             {

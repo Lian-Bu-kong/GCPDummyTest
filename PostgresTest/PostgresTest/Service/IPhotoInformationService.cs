@@ -2,7 +2,7 @@
 
 namespace PostgresTest.Service
 {
-    public interface IPhotoInfmationService
+    public interface IPhotoInformationService
     {
         IEnumerable<PhotoInfmationDto> ReadAllPhotoInfmation();
     }

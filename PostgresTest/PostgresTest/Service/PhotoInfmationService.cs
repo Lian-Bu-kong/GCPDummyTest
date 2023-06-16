@@ -3,7 +3,7 @@ using PostgresTest.Model.Dto;
 
 namespace PostgresTest.Service
 {
-    public class PhotoInfmationService : IPhotoInfmationService
+    public class PhotoInfmationService : IPhotoInformationService
     {
         private DBContext DBContext;
         public PhotoInfmationService(DBContext dbContext)
