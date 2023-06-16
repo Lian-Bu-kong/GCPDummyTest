@@ -12,7 +12,7 @@ using PostgresTest.Infra;
 namespace PostgresTest.Infra.Migrations
 {
     [DbContext(typeof(DBContext))]
-    [Migration("20230616023954_InitialCreate")]
+    [Migration("20230616033725_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -25,7 +25,7 @@ namespace PostgresTest.Infra.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("PostgresTest.Infra.PhotoInfmation", b =>
+            modelBuilder.Entity("PostgresTest.Infra.PhotoInfmationEntity", b =>
                 {
                     b.Property<int>("UserID")
                         .ValueGeneratedOnAdd()
@@ -48,7 +48,7 @@ namespace PostgresTest.Infra.Migrations
                     b.ToTable("PhotoInfmation");
                 });
 
-            modelBuilder.Entity("PostgresTest.WeatherForecast", b =>
+            modelBuilder.Entity("PostgresTest.WeatherForecastEntity", b =>
                 {
                     b.Property<DateTime>("Date")
                         .HasColumnType("timestamp with time zone");

@@ -22,7 +22,7 @@ namespace PostgresTest.Infra.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("PostgresTest.Infra.PhotoInfmation", b =>
+            modelBuilder.Entity("PostgresTest.Infra.PhotoInfmationEntity", b =>
                 {
                     b.Property<int>("UserID")
                         .ValueGeneratedOnAdd()
@@ -45,7 +45,7 @@ namespace PostgresTest.Infra.Migrations
                     b.ToTable("PhotoInfmation");
                 });
 
-            modelBuilder.Entity("PostgresTest.WeatherForecast", b =>
+            modelBuilder.Entity("PostgresTest.WeatherForecastEntity", b =>
                 {
                     b.Property<DateTime>("Date")
                         .HasColumnType("timestamp with time zone");

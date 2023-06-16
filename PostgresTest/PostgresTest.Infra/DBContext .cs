@@ -12,11 +12,15 @@ namespace PostgresTest.Infra
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<WeatherForecast>()
+            // PK : UserID
+            modelBuilder.Entity<PhotoInfmationEntity>()
+           .HasKey(c => c.UserID);
+            // No Key
+            modelBuilder.Entity<WeatherForecastEntity>()
                 .HasNoKey();
         }
 
-        public DbSet<PhotoInfmation> PhotoInfmation { get; set; }
-        public DbSet<WeatherForecast> WeatherForecast { get; set; }
+        public DbSet<PhotoInfmationEntity> PhotoInfmation { get; set; }
+        public DbSet<WeatherForecastEntity> WeatherForecast { get; set; }
     }
 }

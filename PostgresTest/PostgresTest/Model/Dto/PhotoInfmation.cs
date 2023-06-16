@@ -1,12 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System.ComponentModel.DataAnnotations;
-
-namespace PostgresTest.Infra
+﻿namespace PostgresTest.Model.Dto
 {
-    
     public class PhotoInfmation
     {
-        [Key]
         public int UserID { get; set; }
         public string Name { get; set; } = string.Empty;
 
