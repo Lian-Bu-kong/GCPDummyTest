@@ -9,6 +9,13 @@ namespace PostgresTest.Infra
             : base(options)
         {
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<WeatherForecast>()
+                .HasNoKey();
+        }
+
         public DbSet<PhotoInfmation> PhotoInfmation { get; set; }
         public DbSet<WeatherForecast> WeatherForecast { get; set; }
     }
