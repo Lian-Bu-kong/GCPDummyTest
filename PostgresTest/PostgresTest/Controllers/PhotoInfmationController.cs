@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PostgresTest.Service;
 
-namespace PostgresTest.Controllers.v1
+namespace PostgresTest.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -15,7 +15,7 @@ namespace PostgresTest.Controllers.v1
         public ActionResult Get()
         {
             var photoInfmations = _photoInformationService.ReadAllPhotoInfmation();
-       
+
             return Ok(new
             {
                 value = photoInfmations,
